@@ -1,30 +1,48 @@
 {
   "manifest_version": 2,
-  "name": "Unsend Recall for Messenger",
+  "name": "Unremoved for Messenger",
   "description": "Chrome extension that shows you the contents of removed Facebook messages.",
-  "version": "1.0.3",
+  "version": "1.0.0",
   "permissions": [
     "*://*.facebook.com/*",
     "*://*.messenger.com/*",
-    "storage"
+    "storage",
+    "tabs"
   ],
   "externally_connectable": {
-    "matches": ["*://*.facebook.com/*", "*://*.messenger.com/*"]
+    "matches": [
+      "*://*.facebook.com/*",
+      "*://*.messenger.com/*"
+    ]
   },
   "content_scripts": [
     {
-      "matches": ["*://*.facebook.com/*", "*://*.messenger.com/*"],
+      "matches": [
+        "*://*.facebook.com/*",
+        "*://*.messenger.com/*"
+      ],
       "run_at": "document_idle",
-      "js": ["content.js"]
+      "js": [
+        "content.js"
+      ]
     }
   ],
   "background": {
-    "scripts": ["background.js"],
+    "scripts": [
+      "background.js"
+    ],
     "persistent": false
   },
   "web_accessible_resources": [
     "hook.js",
     "util.js"
   ],
-  "icons": { "16": "icon-16.png", "128": "icon-128.png" }
+  "icons": {
+    "16": "icon-16.png",
+    "128": "icon-128.png"
+  },
+  "browser_action": {
+    "default_title": "Xem lại tin nhắn đã gỡ cho Messenger",
+    "default_popup": "popup.html"
+  }
 }

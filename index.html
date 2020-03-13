@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <title>Unremove Messenger by DvL</title>
+    <style media="screen">
+        .message_container {
+            max-width: 1000px;
+            width: 90%;
+            height: 100%;
+            margin: 0 auto;
+            padding-bottom: 45px;
+        }
+
+        span {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 15px;
+        }
+
+        .message_screen {
+            padding: 15px 10px;
+        }
+
+        .bot_item {
+            margin-left: 35px;
+        }
+
+        audio {
+            width: 250px;
+        }
+
+        video {
+            margin-top: 2px;
+            margin-bottom: 2px;
+            max-width: 450px;
+        }
+
+        img {
+            margin-top: 2px;
+            margin-bottom: 2px;
+            width: 75%;
+            max-width: 450px;
+        }
+
+        .message__list {
+            padding: 0;
+            margin: 10px 0px 10px 0px;
+            list-style: none;
+            width: 100%;
+            position: relative;
+        }
+
+        .message__list:after {
+            content: '';
+            display: table;
+            clear: both;
+        }
+
+        .message__item {
+            max-width: 50%;
+            clear: both;
+        }
+
+        .message__item--bot {
+            float: left;
+        }
+
+        .message__item--bot:first-of-type .message {
+            border-top-left-radius: 20px;
+        }
+
+        .message__item--bot:last-of-type .message {
+            border-bottom-left-radius: 20px;
+        }
+
+        .message__item--user {
+            float: right;
+            text-align: right;
+        }
+
+        .message__item--user:first-of-type .message {
+            border-top-right-radius: 20px;
+        }
+
+        .message__item--user:last-of-type .message {
+            border-bottom-right-radius: 20px;
+        }
+
+        .message {
+            padding: 8px 15px;
+            margin-top: 2px;
+            margin-bottom: 2px;
+            display: inline-block;
+            text-align: left;
+            max-width: 440px;
+        }
+
+        .message--bot {
+            background-color: #eee;
+            border-radius: 3px 20px 20px 3px;
+            margin-left: 35px;
+        }
+
+        .message--user {
+            background-color: #0baaff;
+            color: #fff;
+            border-radius: 20px 3px 3px 20px;
+        }
+
+        .bot__image {
+            width: 28px;
+            height: 28px;
+            position: absolute;
+            bottom: 3px;
+            left: 0;
+            border-radius: 20px;
+        }
+
+        .sticker {
+            max-width: 180px;
+        }
+
+        .bot--timer {
+            padding-left: 45px;
+        }
+
+        .timer {
+            font-size: smaller;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="message_container">
+        <div class="message_screen">
+            <div class="message__list">
+                <div class="message__item message__item--user">
+                    <span class="message message--user">Ê lô :</span>
+                    <div class="timer">March 9, 2015 4:04 PM</div>
+                </div>
+                <div class="message__item message__item--user">
+                    <span class="message message--user">k đi học ạ</span>
+                    <div class="timer">March 11, 2015 3:08 PM</div>
+                </div>
+                <div class="message__item message__item--user">
+                    <span class="message message--user">à</span>
+                    <div class="timer">March 11, 2015 3:08 PM</div>
+                </div>
+                <div class="message__item message__item--user">
+                    <span class="message message--user">?</span>
+                    <div class="timer">March 11, 2015 3:08 PM</div>
+                </div>
+            </div>
+            <div class="message__list">
+                <img class="bot__image" src="https://graph.facebook.com/100004748717758/picture">
+                <div class="message__item message__item--bot">
+                    <span class="message message--bot">???</span>
+                    <div class="timer bot--timer">March 11, 2015 3:09 PM</div>
+                </div>
+            </div>
+            <div class="message__list">
+                <div class="message__item message__item--user">
+                    <span class="message message--user">k đi học à?</span>
+                    <div class="timer">March 11, 2015 3:10 PM</div>
+                </div>
+            </div>
+            <div class="message__list">
+                <img class="bot__image" src="https://graph.facebook.com/100004748717758/picture">
+                <div class="message__item message__item--bot">
+                    <span class="message message--bot">co</span>
+                    <div class="timer bot--timer">March 11, 2015 3:10 PM</div>
+                </div>
+            </div>
+            <div class="message__list">
+                <div class="message__item message__item--user">
+                    <span class="message message--user">sao chưa đi?</span>
+                    <div class="timer">March 11, 2015 3:10 PM</div>
+                </div>
+                <div class="message__item message__item--bot">
+                    <a class="bot_item"
+                        href="https://instagram.fhan2-1.fna.fbcdn.net/v/t51.2885-15/e35/p1080x1080/87330923_2464457813867716_5180998380629669177_n.jpg?_nc_ht=instagram.fhan2-1.fna.fbcdn.net&_nc_cat=1&_nc_ohc=ZSidEwCpUDIAX--U28k&oh=665e39bb31c428678c4b045525e4fa0f&oe=5EA3C74E"
+                        target="_blank">
+                        <img class="nonsticker"
+                            src="https://instagram.fhan2-1.fna.fbcdn.net/v/t51.2885-15/e35/p1080x1080/87330923_2464457813867716_5180998380629669177_n.jpg?_nc_ht=instagram.fhan2-1.fna.fbcdn.net&_nc_cat=1&_nc_ohc=ZSidEwCpUDIAX--U28k&oh=665e39bb31c428678c4b045525e4fa0f&oe=5EA3C74E">
+                    </a>
+                    <div class="timer bot--timer">April 1, 2015 3:37 PM</div>
+                </div>
+            </div>
+            <div class="message__list">
+                <div class="message__item message__item--user">
+                    <span class="message message--user">Ok</span>
+                    <div class="timer">April 1, 2015 3:38 PM</div>
+                </div>
+            </div>
+            <div class="message__list">
+                <img class="bot__image" src="https://graph.facebook.com/100004748717758/picture">
+            </div>
+            <div class="message__item message__item--user">
+                <span class="message message--user">hú</span>
+                <div class="timer">March 11, 2020 12:26 AM</div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

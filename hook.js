@@ -39,7 +39,7 @@ function hookMessengerModules(callback) {
       setHookedModules(...modules);
       
       // override and hook into methods relating to messages
-      Modules.RemovedMessageTombstoneContent.getTombstoneContent = getTombstoneContent;
+      Modules.RemovedMessageTombstoneContent.getRemovedMessageTombstoneContent = getTombstoneContent;
       Modules.MercuryThreadInformer.prototype.informNewMessage = informNewMessage;
       Modules.MercuryThreadInformer.prototype.updatedMessage = updatedMessage;
       
